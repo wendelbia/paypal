@@ -1,0 +1,127 @@
+Crio a model
+*criar model Balance e Hitoric, se eu passar -m já cria a migrations: 
+php artisan make: model Balance -m
+Sempre cria a tabela com o nome no plural
+=======================================================
+Criar tabelas 
+Em config/database.php vou em 'mysql' => [] em charset e collation o 'utf8mb4' tem limitações para campos unique() ele permite 140 caracteres e seria preciso fazer para todos os outros campos, para q não seja necessário vamos em Providers/AppServicePovider.php em public function boot() e modificamos.
+Configuro dados de conecção do banco de dados: config/database e verificamos se está tudo certo.
+e php artisan migrate
+========================================================
+Passo a Passo
+
+1º - para laravel 5.6:
+composer require jeroennoten/laravel-adminlte=~1.27.2
+
+2º - php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=assets
+
+3º - php artisan make:adminlte
+
+
+
+4º - php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=config
+
+5º - php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\AdminLteServiceProvider" --tag=views
+
+========================================================
+#08 Layout AdminLTE:
+https://github.com/jeroennoten/Laravel-AdminLTE
+Comando para instalar com ~1.0 pq é compatível com o 5.6:composer require jeroennoten/laravel-adminlte=1.0
+Publish the public assets:
+php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=assets
+===========================================================
+#09 Vamos usar o seeder em database/seeders
+comando para criar a seeder: php artisan make:seed UsersTableSeeder
+comando para rodar a seeder: php artisan db:seed
+===========================================================
+#10 Aquivos q serão gerados para o admimLte:
+php artisan make:adminlte
+Para configurar o admminlte: 
+php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=config
+ícones: fontawesome.io/icons/
+==========================================================
+#12 Organização 
+dentro de view criar uma pasta site e também admin/home/index.blade.php e crio a rota em web.php e crio o controller
+
+crio Admin/AdminController
+=========================================================
+#13 Redirecionamento
+mudamos em Controller/Auth/LoginController.php e em $redirectTo = '/admin' em RegisterController também e em:
+Middleware/RedirectiAuthenticated.php 
+=========================================================
+#14 Tradução
+Traduções: C:\laragon\www\systemsaldo\resources\lang
+λ git clone https://github.com/UpInside/laravel-pt-BR.git ./pt-BR
+Costumizar:
+php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag="views"
+Editar se quiser em: resources/views/vendor/adminlte
+==========================================================
+#15 Customizar views template adminLTE
+https://github.com/jeroennoten/Laravel-AdminLTE#7-customize-views 
+Vou em customize view e: 
+λ php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag="views"
+=============================================================
+#16 Layout Exibição do saldo
+Fazer um novo menu abaixo do Home no dashboard:
+config/adminlte.php em 'menu' => [] e submenus
+Crio: AdminBalanceController.php, crio a view index, e a rota e copio o templante do Site Oficial Admin LTE: https://adminlte.io
+==============================================================
+#17 exibir saldo do usu
+==============================================================
+#18 Preparar formulário de recarga
+==============================================================
+#19 - Preparar Para Fazer Recarga Saldo do Usuário no Laravel
+==============================================================
+#20 - FAZER RECARGA E EXIBIR RETORNOS
+==============================================================
+#21 - Registrar Históricos de Recargas no Laravel
+==============================================================
+#22 - BEGINTRANSACTION
+==============================================================
+#23 - VALIDAÇÃO DE ENTRADA DE SALDO
+==============================================================
+#24 - MELHORAR EXIBIÇÃO DE MENSAGENS
+==============================================================
+#25 - PREPARAR FAZER SAQUE
+==============================================================
+#26 - FAZER SAQUE E REGISTRAR HISTÓRICO
+==============================================================
+#27 - PREPARAR PARA FAZER TRANSFERÊNCIA DE SALDO
+==============================================================
+#28 - CONFIRMAÇÃO DE TRANSFERÊNCIA SALDO
+==============================================================
+#29 - TRANSFERIR SALDO DE UMA CONTA PARA OUTRA
+==============================================================
+#30 - EXIBIR HISTÓRICO FINANCEIRO DO USUÁRIO
+==============================================================
+#31 - MELHORIAS NA EXIBIÇÃO DO HISTÓRICO
+==============================================================
+#32 - PAGINAR HISTÓRICOS DE MOVIMENTAÇÕES
+==============================================================
+#33 - PREPARAR PARA FILTRAR HISTÓRICOS
+==============================================================
+#34 - FILTRAR REGISTROS 
+==============================================================
+#35 - FILTRO COM PAGINAÇÃO
+==============================================================
+#36 - FILTRAR PELO USUÁRIO LOGADO LARAVEL SCOPE
+==============================================================
+#37 - PREPARAR PÁGINA DE EXIBIÇÃO DO PERFIL
+==============================================================
+#38 - CRIAR TEMPLATE DO SITE
+==============================================================
+#39 - EDITAR PERFIL USUÁRIO
+==============================================================
+#40 - UPLOAD IMAGEM PERFIL USUÁRIO
+==============================================================
+#41 - EXIBIR IMAGEM DE PERFIL DO USUÁRIO
+==============================================================
+#42 - VALIDAR EDIÇÃO DE PERFIL DO USUÁRIO
+
+
+
+
+
+
+
+
