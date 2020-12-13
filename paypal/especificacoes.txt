@@ -1,0 +1,161 @@
+Para o login: apago a rotas home, HomeController e home.blade.php e para redirecionarmento quando faço login ou registro modifico em Controllers/Auth/Register em protected $redirectTo = "/" e posso redirecionar para onde quiser mudo de home para barra mesmo faço isso no login também em LoginController e em ResetController da mesma maneira.
+-------------------------------------------------------
+Depois de registrar o usu e na url tentar acessar a rota home pode dar erro então para corrigir isso: vou em Middleware/RedrectAuthenticated 
+
+-------------------------------------------------------
+uso para teste de envio de email o safe email testing
+
+vou em config/email
+	from => [...] e preencho 
+Outras configurações no arquivo .env
+--------------------------------------------------
+pacote do paypal:composer require paypal/rest-api-sdk-php
+--------------------------------------------------
+Pacote: https://github.com/paypal/PayPal-PHP-SDK
+Nesse link mostra passa a passo para instalação em sample->order q é a ordem de pedidos
+--------------------------------------------------
+Email ID:
+sb-kcngh3418662@personal.example.com
+System Generated Password: 1biabiabia
+
+Email ID:
+sb-jskxx3424064@business.example.com
+System Generated Password:
+1biabiabia
+=====================================================
+
+Para subir o projeto no github
+Entre no seu projeto
+
+git add . para adicionar arquivos
+
+git commit -m "Mensagem", sendo que m é uma mensagem 
+
+git push ou git push --set-upstream origin master
+
+
+meu git:  
+https://github.com/wendelbia/laravel
+senha: 1BIAbiabia
+senha no terminal: fdsaasdf
+
+Funções de versionadores de código para as várias versões de um software:
+.Organizar
+.Distribuir
+.Gerenciar
+Tanto para pequenos ou grandes projetos
+
+Criado por Linus Turvan criador de Kenel
+Como funcional:
+Temos um servidor local ou remoto, e precisamos fazer um clone de um projeto ou o meu próprio em minha máquina e começo a desenvolver melhorias, mudanças e junto tudo em um pacote dentro de um commit e então envio para um repositório remoto com um push, ao alterar um repositório q foi usado por outro programador para que eu possa atualizar o código depois de ter envidado tudo isso para o repositório eu faço um pull em vez de clonar, então:
+======================================================================
+git clone: para baixar o projeto a primeira vez na sua máquina.
+
+git add . : para adicionar os arquivos nos commits
+
+git commit -m "mensagem": para formalizar as mudanças
+
+git push: para subir as alterações no github
+
+git pull: para receber o código atualizado
+
+
+
+então vário programadores que fazem pedidos de melhorias ao repositório através de uma operação que se chama merge
+
+Git não é a mesma coisa que GitHub
+
+Git é um programa que versiona códigos
+GitHub é um servidor na nuvem que armazena seus códigos e possui uma interface amigável. Assim como o GitHub temos outros serviços tão bons quanto, como o GitLab e BitBucket
+
+Entre no seu projeto
+
+git add . para adicionar arquivos
+
+git commit -m "Mensagem", sendo que m é uma mensagem 
+
+git push ou git push --set-upstream origin master
+
+Os arquivos ainda estaram na máquina para q os programadores tenham acesso mesmo privado é necessário o comando git push
+
+Para trabalhar em equipe se faz necessário o pull rerquest:
+Nada mais é q um pedido de incorporação do seu código na árvore de códigos
+
+Dentro do Git podemos ter vários ramos (branch em inglês), onde o ramo principal e padrão é o master
+
+Raramente em um projeto com vários programadores fazemos os commits e pushs diretamente no branch master
+
+Todas essas alterações são feitas por pull request  por um responsável técnico que analisa seu código para fazer um merge dentro do master
+
+É enviado o código, alguns progamadores analisam seu código (code review) e fazem alguns comentários caso necessite de melhorias. Depois de corrigido e ajustado é incorporado no branch master do projeto. 
+
+Pode-se reparar que estamos trabalhando no branch master do projeto, o correto é criar um branch específico através do comando (git checkout -b nome-da-banch) por exemplo:
+ git checkout -b alterar-de-cor
+ em que será adicionado uma nome a uma branch, o nome da branch tem a ver com a finalidade.
+
+ Feita a alteração eu repito o processo passado anteriormente:
+
+
+git add .
+
+git commit -m "alteração de cor fundo da tela"
+
+aparece a mensagem com a alteração feita, logo depois subo essa alteração com o comando:
+
+git push
+
+O único passo diferente do anterior que se faz é abrir o GitHub para que possamos criar o Pull Request. Este Pull Request irá descrever as mudanças e deixar uma área para discussão. Vou no brand e crio PR(pull request)
+
+Antes de desenvolver qualquer alteração no seu projeto, é importante que baixe as atualizações feitas pela equipe ou por vc mesmo em outro momento. Para isso basta digitar o comando "git pull" no terminal. 
+
+Gerenciando os conflitos de código:
+Com este processo de baixar é normal que ocorram conflitos de código, esse conflitos são áreas de código onde 1 ou mais programadores alteram e que agora precisam ser revisadas. Normalmente o Git consegui resolver a grande maioria, e os que não consegue ele marca o código como um bloco visual.
+
+Ao abrir o código estará marcado >>>> qual os conflitos e poderá decidir o que fica e o que não fica e para ajustar é necessário realizar o git add . e o git commit -m "resolvendo conflito" e realizar o git push e subir para o repositório remoto
+
+Como colaborar com outros porjetos remotos ou trabalhar em equipe:
+
+A maioria dos projetos open source possuem um arquivo chamado CONTRIBUTING.md, onde se encotram as regras de contribuição e também as principais necessidades do projeto. Caso vc não ache é sempre bom buscar por um mantenedor do projeto e perguntar antes de sair fazendo qualquer coisa. Não desperdice energia
+
+1 criar o código e subir no GitHub
+2 documentar em uma espécie de "diário de bordo"
+
+No README primeira parte da documentação será uma explicação ilustrada com telas, será explicado com uma linguagem não muito técnica o que o projeto se propõe a fazer
+
+Para utilizar esse projeto, por favor, acesse: www.meunome......
+
+O que é o projeto:
+
+Principais funcionalidade
+
+Faça um diário de bordo com por exemplo
+
+diário de bordo 
+
+Dia 1 - 08/10/2020
+Neste dia eu fiz:
+
+.x
+.y
+.z
+
+A minha principal dificuldade foi...
+
+Dia 2 - 09/12/2020
+
+Hoje foi mais complicado porque...cd
+
+=========================================================
+…or create a new repository on the command line
+echo "# paypal" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/wendelbia/paypal.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/wendelbia/paypal.git
+git branch -M main
+git push -u origin main

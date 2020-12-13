@@ -1,0 +1,29 @@
+.navbar-default {
+    background-color: #02042d;
+    border-color: #02042d;
+    border-radius: 0px;
+}
+
+.dropdown-menu{
+    background: #02042d;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.form-control{
+    border-radius: 0px;
+    height: 50px;
+}
+
+.panel-default{border-color: #02042d;}
+.panel{border-radius: 0px;}
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #02042d;
+    border-color: #ddd;
+}
+
+.panel-heading {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
